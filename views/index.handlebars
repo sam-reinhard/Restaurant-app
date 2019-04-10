@@ -1,0 +1,29 @@
+<h1>Restaurant Tracker</h1>
+
+<h2>Restaurants I Haven't Tried</h2>
+
+<ul>
+    {{#each restaurants}}
+        {{#unless tried}}
+            <li>
+                {{restaurant_name}}
+
+                <button class="triedIt" data-id="{{id}}">
+                    Tried
+                </button>
+            </li>
+        {{/unless}}  
+    {{/each}}      
+</ul>
+
+<h2>Restaurants I Have Tried</h2>
+
+<ul>
+    {{#each restaurants}}
+        {{#if tried}}
+            <li>
+                {{restaurant_name}}
+            </li>
+        {{/if}}  
+    {{/each}}      
+</ul>
