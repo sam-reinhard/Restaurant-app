@@ -2,7 +2,7 @@ var express = require("express");
 
 var PORT = process.env.PORT || 8080;
 
-var app = expres();
+var app = express();
 
 // Serve static content
 app.use(express.static("public"));
