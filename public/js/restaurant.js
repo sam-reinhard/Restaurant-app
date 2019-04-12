@@ -28,7 +28,7 @@ $(function(){
             tried: false 
         };
 
-        $.ajax("/api/restaurants", {
+        $.ajax("/api/restaurants/", {
             type: "POST",
             data: newRestaurant
         }).then(
