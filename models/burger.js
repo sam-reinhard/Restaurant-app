@@ -7,12 +7,16 @@ var restaurant = {
         });
     },
 
-    insertOne: function(){
-
+    insertOne: function(cols, vals, cb){
+        orm.insertOne("restaurants", cols, vals, function(res){
+            cb(res);
+        });
     },
 
-    updateOne: function(){
-
+    updateOne: function(objColVals, condition, cb){
+        orm.updateOne("restaurants", objColVals, condition, function(res){
+            cb(res);
+        });
     }
 };
 

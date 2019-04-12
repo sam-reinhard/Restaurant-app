@@ -22,7 +22,7 @@ router.post("/api/restaurants", function(req, res){
     ], [
         req.body.restaurant_name, req.body.tried
     ], function(result){
-        res.json({ id: result.insertId })
+        res.json({ id: result.insertId });
     });
 });
 

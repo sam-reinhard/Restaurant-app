@@ -1,32 +1,35 @@
 <h1>Restaurant Tracker</h1>
+<div id="notTried">
+    <h2>Restaurants I Haven't Tried</h2>
 
-<h2>Restaurants I Haven't Tried</h2>
+    <ul>
+        {{#each restaurants}}
+            {{#unless tried}}
+                <li>
+                    {{restaurant_name}}
 
-<ul>
-    {{#each restaurants}}
-        {{#unless tried}}
-            <li>
-                {{restaurant_name}}
+                    <button class="triedIt" data-id="{{id}}">
+                        Tried
+                    </button>
+                </li>
+            {{/unless}}  
+        {{/each}}      
+    </ul>
+</div>
 
-                <button class="triedIt" data-id="{{id}}">
-                    Tried
-                </button>
-            </li>
-        {{/unless}}  
-    {{/each}}      
-</ul>
+<div id="haveTried">
+    <h2>Restaurants I Have Tried</h2>
 
-<h2>Restaurants I Have Tried</h2>
-
-<ul>
-    {{#each restaurants}}
-        {{#if tried}}
-            <li>
-                {{restaurant_name}}
-            </li>
-        {{/if}}  
-    {{/each}}      
-</ul>
+    <ul>
+        {{#each restaurants}}
+            {{#if tried}}
+                <li>
+                    {{restaurant_name}}
+                </li>
+            {{/if}}  
+        {{/each}}      
+    </ul>
+</div>
 
 <h2>Add a Restaurant</h2>
 <form class="create-form">
