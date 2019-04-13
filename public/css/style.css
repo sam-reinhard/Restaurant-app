@@ -3,12 +3,41 @@ body {
     background-size: cover;
 }
 
-h1, h2 {
+h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+}
+#notTried, #haveTried {
+    background-color: rgba(255, 255, 255, 0.849);
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+#formDiv, label, input {
     text-align: center;
 }
 
-#notTried, #haveTried {
-    background-color: rgba(255, 255, 255, 0.76);
-    margin: 20px 0px;
-    border-radius: 5px;
+label {
+    margin-right: 10px;
+}
+
+ul {
+    padding-bottom: 20px;
+}
+
+li {
+    padding: 1px;
+}
+
+.triedIt {
+    margin-left: 10px;
+}
+
+#submitButton {
+    margin: 10px 0px;
 }
